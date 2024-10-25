@@ -1,0 +1,77 @@
+[data-bs-theme="light"] body {
+    background-color: #fce6cf; /* Retained the custom background color */
+}
+
+[data-bs-theme="dark"] body {
+    background-color: #2f1e0c; /* Retained the custom background color */
+}
+
+.custom-margin {
+    margin-top: 80px; /* Prevent touching the navbar */
+}
+
+/* Section Titles */
+.section-title {
+    color: #8e1f2c;
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Text Content Styling */
+#overview-section p, #welcome-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* List Styling */
+ul {
+    color: #555;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Cards Styling */
+.card {
+    margin-top: 15px; /* Increased space between cards for better readability */
+    border: 1px solid #8e1f2c; /* Border in the preferred color */
+}
+
+.card-header {
+    background-color: #8e1f2c; /* Preferred color */
+    color: white;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    color: #8e1f2c; /* Preferred color */
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #555; /* Neutral text color for readability */
+}
+
+/* Footer remains unchanged */
+[data-bs-theme="light"] .footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f8f9fa; /* Light footer background */
+    margin-top: 40px; /* Space from the content above */
+}
+
+[data-bs-theme="dark"] .footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #6b6c6c; /* Light footer background */
+    margin-top: 40px; /* Space from the content above */
+}
