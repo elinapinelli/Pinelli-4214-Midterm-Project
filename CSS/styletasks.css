@@ -1,0 +1,196 @@
+body {
+    background-color: #fce6cf; /* Custom background color */
+}
+
+.custom-margin {
+    margin-top: 80px; /* Prevent touching the navbar */
+}
+
+
+
+.navbar {
+    background-color: #8e1f2c; /* Change to your preferred color */
+    padding: 1rem; /* Add padding for better spacing */
+}
+
+.navbar-brand {
+    font-weight: bold; /* Make the brand name bold */
+    font-size: 1.5rem; /* Increase font size */
+}
+
+.nav-link {
+    color: #8e1f2c; /* White text color */
+    font-weight: 500; /* Medium font weight */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.nav-link:hover {
+    color: #f47998; /* Change color on hover for better visibility */
+}
+
+
+
+.navbar-toggler-icon {
+    background-color: #ffffff; /* White icon for toggler */
+}
+
+#filters_sorting{
+   display: flex;
+
+}
+#filters_sorting div {
+    margin-right: 10px; /* Optional: Adds space between elements */
+}
+
+
+
+
+#task-section {
+    padding-top: 20px;
+}
+
+#filters_sorting_container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#filters_sorting_container h5 {
+    margin: 0;
+    padding-right: 10px;
+}
+
+#filters, #sorting {
+    margin-right: 10px;
+}
+.btn-secondary {
+    background-color: #8e1f2c;
+    border-color: #8e1f2c;
+}
+
+.btn-secondary:hover {
+    background-color: #721d26; /* Darker shade for hover effect */
+    border-color: #721d26;
+    color: #ffffff; /* Change text color on hover */
+}
+
+.dropdown-menu {
+    background-color: #ffffff; /* Background color for the dropdown */
+}
+
+.dropdown-item {
+    color: #8e1f2c; /* Text color for dropdown items */
+}
+
+.dropdown-item:hover {
+    background-color: #8e1f2c; /* Background color on hover */
+    color: #ffffff; /* Change text color on hover */
+}
+
+   /* Table Styles */
+   .table {
+    background-color: #000; /* Light background for the table */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.table th, .table td {
+    padding: 12px 15px; /* Add padding for better spacing */
+    vertical-align: middle; /* Center align the content */
+}
+
+.table thead th {
+    background-color: #8e1f2c; /* Charcoal Gray */
+    color: #ffffff; /* White text for header */
+    font-weight: bold; /* Make header text bold */
+}
+
+.table-hover tbody tr:hover {
+    background-color: #e9ecef; /* Light grey on hover for rows */
+}
+
+.table-bordered {
+    border: 2px solid #000; /* Black border for the table */
+}
+
+/* Make the table responsive with some margin */
+.table-responsive {
+    margin: 20px 0; /* Margin above and below the table */
+}
+
+
+
+.footer p {
+    margin: 0; /* Remove default margin */
+    color: #555; /* Footer text color */
+}
+
+.footer a {
+    color: #007bff; /* Footer link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+[data-bs-theme="light"] body {
+    background-color: #fce6cf; /* Retained the custom background color */
+}
+
+[data-bs-theme="dark"] body {
+    background-color: #2f1e0c; /* Retained the custom background color */
+}
+
+.custom-margin {
+    margin-top: 80px; /* Prevent touching the navbar */
+}
+
+/* Section Titles */
+.section-title {
+    color: #8e1f2c;
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Cards Styling */
+.card {
+    margin-top: 15px; /* Increased space between cards for better readability */
+    border: 1px solid #8e1f2c; /* Border in the preferred color */
+}
+
+.card-header {
+    background-color: #8e1f2c; /* Preferred color */
+    color: white;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    color: #8e1f2c; /* Preferred color */
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #555; /* Neutral text color for readability */
+}
+
+/* Footer remains unchanged */
+[data-bs-theme="light"] .footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f8f9fa; /* Light footer background */
+    margin-top: 40px; /* Space from the content above */
+}
+
+[data-bs-theme="dark"] .footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #6b6c6c; /* Light footer background */
+    margin-top: 40px; /* Space from the content above */
+}

@@ -1,0 +1,20 @@
+[data-bs-theme="light"] body {
+    background-color: #fce6cf; /* Retained the custom background color */
+}
+
+[data-bs-theme="dark"] body {
+    background-color: #2f1e0c; /* Retained the custom background color */
+}
+[data-bs-theme="light"] .footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f8f9fa; /* Light footer background */
+    margin-top: 40px; /* Space from the content above */
+}
+
+[data-bs-theme="dark"] .footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #6b6c6c; /* Light footer background */
+    margin-top: 40px; /* Space from the content above */
+}
