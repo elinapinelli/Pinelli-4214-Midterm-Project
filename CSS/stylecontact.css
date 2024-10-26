@@ -1,0 +1,154 @@
+
+.navbar {
+    background-color: #8e1f2c; /* Change to your preferred color */
+    padding: 1rem; /* Add padding for better spacing */
+}
+
+.navbar-brand {
+    font-weight: bold; /* Make the brand name bold */
+    font-size: 1.5rem; /* Increase font size */
+}
+
+.nav-link {
+    color: #8e1f2c; /* White text color */
+    font-weight: 500; /* Medium font weight */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.nav-link:hover {
+    color: #f47998; /* Change color on hover for better visibility */
+}
+
+
+
+.navbar-toggler-icon {
+    background-color: #ffffff; /* White icon for toggler */
+}
+
+#filters_sorting{
+   display: flex;
+
+}
+#filters_sorting div {
+    margin-right: 10px; /* Optional: Adds space between elements */
+}
+
+
+[data-bs-theme="light"] body {
+    background-color: #fce6cf; /* Retained the custom background color */
+}
+
+[data-bs-theme="dark"] body {
+    background-color: #2f1e0c; /* Retained the custom background color */
+}
+
+.container {
+    margin-top: 40px; /* Space from the top */
+    max-width: 600px; /* Set max width for better layout */
+}
+
+.contact-header {
+    text-align: center; /* Center the header */
+    margin-bottom: 30px; /* Space below header */
+    color: #343a40; /* Dark color for the header */
+}
+
+.contact-header h2 {
+    font-size: 2rem; /* Larger font size */
+    font-weight: bold; /* Bold font weight */
+}
+
+.contact-header p {
+    font-size: 1rem; /* Regular font size */
+    color: #6c757d; /* Lighter text color */
+    margin-top: 10px; /* Space above paragraph */
+}
+
+.form-label {
+    font-weight: bold; /* Bold labels for clarity */
+    color: #495057; /* Darker label color */
+}
+
+/* Custom styling for the form */
+[data-bs-theme="light"] .contact-form {
+    background-color: white; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+[data-bs-theme="dark"] .contact-form {
+    background-color: rgb(120, 120, 120); /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Style input fields */
+[data-bs-theme="light"] .contact-form .form-control {
+    background-color: white; /* White background for input fields */
+    color: black; /* Black text color */
+    border: 1px solid #ced4da; /* Default border color */
+}
+
+[data-bs-theme="dark"] .contact-form .form-control {
+    background-color: rgb(183, 183, 183); /* White background for input fields */
+    color: black; /* Black text color */
+    border: 1px solid #ced4da; /* Default border color */
+}
+
+.contact-form .form-control:focus {
+    border-color: #f47998; /* Border color when focused */
+    box-shadow: none; /* Remove default shadow */
+}
+
+/* Style submit button */
+.contact-form button {
+    background-color: #8e1f2c; /* Custom button color */
+    color: white; /* White text */
+    border: none; /* Remove border */
+}
+
+.contact-form button:hover {
+    background-color: #721726; /* Darker shade on hover */
+}
+
+/* Add responsiveness to the iframe */
+iframe {
+    width: 100%;
+    border: 0; /* Remove border */
+}
+
+/* Margin above Google Maps section */
+.map-section {
+    margin-top: 30px; /* Space above map */
+}
+
+[data-bs-theme="light"] .footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f8f9fa; /* Light footer background */
+    margin-top: 40px; /* Space from the content above */
+}
+
+[data-bs-theme="dark"] .footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #6b6c6c; /* Light footer background */
+    margin-top: 40px; /* Space from the content above */
+}
+.footer p {
+    margin: 0; /* Remove default margin */
+    color: #555; /* Footer text color */
+}
+
+.footer a {
+    color: #007bff; /* Footer link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+

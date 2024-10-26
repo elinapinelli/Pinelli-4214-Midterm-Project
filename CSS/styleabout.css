@@ -1,0 +1,129 @@
+.navbar {
+    background-color: #8e1f2c; /* Change to your preferred color */
+    padding: 1rem; /* Add padding for better spacing */
+}
+
+.navbar-brand {
+    font-weight: bold; /* Make the brand name bold */
+    font-size: 1.5rem; /* Increase font size */
+}
+
+.nav-link {
+    color: #8e1f2c; /* White text color */
+    font-weight: 500; /* Medium font weight */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.nav-link:hover {
+    color: #f47998; /* Change color on hover for better visibility */
+}
+
+
+
+.navbar-toggler-icon {
+    background-color: #ffffff; /* White icon for toggler */
+}
+
+#filters_sorting{
+   display: flex;
+
+}
+#filters_sorting div {
+    margin-right: 10px; /* Optional: Adds space between elements */
+}
+
+
+[data-bs-theme="light"] body {
+    background-color: #fce6cf; /* Retained the custom background color */
+}
+
+[data-bs-theme="dark"] body {
+    background-color: #2f1e0c; /* Retained the custom background color */
+}
+
+.custom-margin {
+    margin-top: 80px; /* Prevent touching the navbar */
+}
+
+[data-bs-theme="light"] .about-section {
+    background-color: #fce6cf; /* Maintain the same background color */
+    padding: 20px; /* Add padding for better spacing */
+    border-radius: 8px; /* Round corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+[data-bs-theme="dark"] .about-section {
+    background-color: #3e2810; /* Maintain the same background color */
+    padding: 20px; /* Add padding for better spacing */
+    border-radius: 8px; /* Round corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.about-title {
+    color: #8e1f2c; /* Use your preferred color for the title */
+    font-weight: bold; /* Bold font for emphasis */
+    margin-bottom: 15px; /* Space below the title */
+    font-size: 1.8rem; /* Larger font size for better visibility */
+}
+
+[data-bs-theme="light"] .about-text {
+    color: #333; /* Darker text color for readability */
+    font-size: 1.1rem; /* Slightly larger font size for better readability */
+    line-height: 1.6; /* Increased line height for better text flow */
+}
+[data-bs-theme="dark"] .about-text {
+    color: #a7a6a6; /* Darker text color for readability */
+    font-size: 1.1rem; /* Slightly larger font size for better readability */
+    line-height: 1.6; /* Increased line height for better text flow */
+}
+
+.about-section {
+    margin-bottom: 30px; /* Adds space below the About section */
+}
+
+.carousel {
+    margin-top: 20px; /* Optional: Adds additional space above the carousel */
+}
+
+
+.custom-carousel {
+    max-width: 600px; /* Limit the width of the entire carousel */
+    margin: 0 auto; /* Center the carousel */
+}
+
+.custom-carousel .carousel-inner {
+    max-height: 350px; /* Set maximum height of the carousel */
+}
+
+.custom-carousel .carousel-item img {
+    width: 100%; /* Make sure the image spans the entire width */
+    height: auto; /* Keep aspect ratio of the images */
+    object-fit: cover; /* Crop the images to fit the height */
+}
+
+
+[data-bs-theme="light"] .footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f8f9fa; /* Light footer background */
+    margin-top: 40px; /* Space from the content above */
+}
+
+[data-bs-theme="dark"] .footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #6b6c6c; /* Light footer background */
+    margin-top: 40px; /* Space from the content above */
+}
+.footer p {
+    /* margin: 0; Remove default margin */
+    color: #555; /* Footer text color */
+}
+
+.footer a {
+    color: #007bff; /* Footer link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
