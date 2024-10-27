@@ -180,7 +180,6 @@ body {
     color: #555; /* Neutral text color for readability */
 }
 
-/* Footer remains unchanged */
 [data-bs-theme="light"] .footer {
     text-align: center;
     padding: 20px 0;
@@ -191,6 +190,19 @@ body {
 [data-bs-theme="dark"] .footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #6b6c6c; /* Light footer background */
+    background-color: #000000; /* Light footer background */
     margin-top: 40px; /* Space from the content above */
+}
+.footer p {
+    margin: 0; /* Remove default margin */
+    color: #555; /* Footer text color */
+}
+
+.footer a {
+    color: #007bff; /* Footer link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
 }

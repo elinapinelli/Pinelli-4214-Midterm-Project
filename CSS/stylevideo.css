@@ -5,6 +5,18 @@
 [data-bs-theme="dark"] body {
     background-color: #2f1e0c; /* Retained the custom background color */
 }
+
+.form-check-input:checked {
+    background-color: #8e1f2c;
+    border-color: #8e1f2c;
+}
+.form-check-label {
+    color: #8e1f2c;
+}
+.form-check-input {
+    accent-color: #8e1f2c; /* For modern browsers that support it */
+}
+
 [data-bs-theme="light"] .footer {
     text-align: center;
     padding: 20px 0;
@@ -15,6 +27,19 @@
 [data-bs-theme="dark"] .footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #6b6c6c; /* Light footer background */
+    background-color: #000000; /* Light footer background */
     margin-top: 40px; /* Space from the content above */
+}
+.footer p {
+    margin: 0; /* Remove default margin */
+    color: #555; /* Footer text color */
+}
+
+.footer a {
+    color: #007bff; /* Footer link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
 }

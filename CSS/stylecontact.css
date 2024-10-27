@@ -50,7 +50,7 @@
 .contact-header {
     text-align: center; /* Center the header */
     margin-bottom: 30px; /* Space below header */
-    color: #343a40; /* Dark color for the header */
+    color: #8e1f2c; /* Dark color for the header */
 }
 
 .contact-header h2 {
@@ -58,15 +58,26 @@
     font-weight: bold; /* Bold font weight */
 }
 
-.contact-header p {
+[data-bs-theme="light"] .contact-header p {
     font-size: 1rem; /* Regular font size */
-    color: #6c757d; /* Lighter text color */
+    color: #8e1f2c; /* Lighter text color */
     margin-top: 10px; /* Space above paragraph */
 }
 
-.form-label {
+[data-bs-theme="dark"] .contact-header p {
+    font-size: 1rem; /* Regular font size */
+    color: #ffffff; /* Lighter text color */
+    margin-top: 10px; /* Space above paragraph */
+}
+
+[data-bs-theme="light"] .form-label {
     font-weight: bold; /* Bold labels for clarity */
-    color: #495057; /* Darker label color */
+    color: #8e1f2c; /* Darker label color */
+}
+
+[data-bs-theme="dark"] .form-label {
+    font-weight: bold; /* Bold labels for clarity */
+    color: #ffffff; /* Darker label color */
 }
 
 /* Custom styling for the form */
@@ -78,10 +89,10 @@
 }
 
 [data-bs-theme="dark"] .contact-form {
-    background-color: rgb(120, 120, 120); /* White background for the form */
+    background-color: rgb(0, 0, 0); /* White background for the form */
     border-radius: 8px; /* Rounded corners */
     padding: 20px; /* Padding inside the form */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 0 10px #8e1f2c; /* Subtle shadow */
 }
 
 /* Style input fields */
@@ -92,7 +103,7 @@
 }
 
 [data-bs-theme="dark"] .contact-form .form-control {
-    background-color: rgb(183, 183, 183); /* White background for input fields */
+    background-color: rgb(42, 39, 39); /* White background for input fields */
     color: black; /* Black text color */
     border: 1px solid #ced4da; /* Default border color */
 }
@@ -134,7 +145,7 @@ iframe {
 [data-bs-theme="dark"] .footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #6b6c6c; /* Light footer background */
+    background-color: #000000; /* Light footer background */
     margin-top: 40px; /* Space from the content above */
 }
 .footer p {

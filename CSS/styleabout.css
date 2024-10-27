@@ -111,11 +111,11 @@
 [data-bs-theme="dark"] .footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #6b6c6c; /* Light footer background */
+    background-color: #000000; /* Light footer background */
     margin-top: 40px; /* Space from the content above */
 }
 .footer p {
-    /* margin: 0; Remove default margin */
+    margin: 0; /* Remove default margin */
     color: #555; /* Footer text color */
 }
 
