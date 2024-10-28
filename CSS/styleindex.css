@@ -64,9 +64,24 @@ ul li {
     font-weight: bold;
 }
 
+
+
 .card-text {
-    color: #555; /* Neutral text color for readability */
+    color: var(--text-color, #000000); /* Fallback to black if variable isn't set */
 }
+
+/* Light Mode Styles */
+[data-bs-theme="light"] .card-text {
+    color: #000000; /* Neutral text color for light mode */
+}
+
+/* Dark Mode Styles */
+[data-bs-theme="dark"] .card-text {
+    color: #ffffff; /* Neutral text color for dark mode */
+}
+
+
+
 [data-bs-theme="light"] .footer {
     text-align: center;
     padding: 20px 0;
