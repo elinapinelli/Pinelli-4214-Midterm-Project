@@ -1,130 +1,119 @@
-function display_tasks(filter="all",sort="aa"){
-    $("#filters_h5").text("Filter By : "+filter+" , Sort By : "+sort)
-    if(task_list.length===1){
-        $("#h3_table").text("Table of Tasks ("+task_list.length+" task)")
-    }
-    else{
-        $("#h3_table").text("Table of Tasks ("+task_list.length+" tasks)")
-    }
-    
-    $("#table_body").empty(); // empty the task table with jquery
-    if(filter==="completed"){
-        filter=true
-    }
-    else if(filter==="pending"){
-        filter=false
-    }
-    
-    if (sort!=="aa"){
-        task_list.sort(function(a,b){
-            return a[sort].localeCompare(b[sort])
-        })
-    }
-    else{
-        task_list=readFromLocalStorage("task_list")
-    }
-    for(let i=0; i<task_list.length; i++){
-        if(filter==="all" || filter===task_list[i].status){
-            let tr = $('<tr></tr>'); // create tr element with jquery
-            let th = $('<th></th>');
-            th.attr('scope', 'row');
-            th.text(i+1); // Set the content to '1'    
-            let td1 = $('<td></td>');
-            td1.text(task_list[i].name);
-            let td2 = $('<td></td>');
-            td2.text(task_list[i].description);
-            let td3 = $('<td></td>');
-            td3.text(task_list[i].date);
-            let td4 = $('<td></td>');
-            let td5 = $('<td></td>');
-            let td6 = $('<td></td>');
-            let td7 = $('<td></td>');
-            
-            // Edit button
-            let btn5 = $('<button></button>');
-            btn5.text("Edit");
-            btn5.attr('class', 'btn btn-outline-warning');
-            btn5.click(function(){
-                let aa = i+1;
-                $("#form_title").text("Update Task " + aa);
-                $("#name").val(task_list[i].name);   
-                $("#description").val(task_list[i].description);
-                $("#date").val(task_list[i].date);
-                to_update = i;
-                status_to_update=task_list[i].status
-                $('html, body').animate({ scrollTop: 0 }, 'slow'); // Scroll up to the top
-                
-            });
+function display_tasks(filter = "all", sort = "aa") {
+    // Update the filter and sort display text
+    $("#filters_h5").text("Filter By : " + filter + " , Sort By : " + sort);
 
-            // Delete button
-            let btn6 = $('<button></button>');
-            btn6.text("Delete");
-            btn6.attr('class', 'btn btn-outline-danger');
-            btn6.click(function(){
-                latest_tasks["deleted"]=task_list[i]
-                writeToLocalStorage("latest_tasks", latest_tasks)
+    // Set the table header based on the number of tasks
+    if (task_list.length === 1) {
+        $("#h3_table").text("Table of Tasks (" + task_list.length + " task)");
+    } else {
+        $("#h3_table").text("Table of Tasks (" + task_list.length + " tasks)");
+    }
 
-                task_list.splice(i, 1); // remove task from tasks list
-                writeToLocalStorage("task_list", task_list)
-                display_tasks();
-            });
+    // Clear the task table body
+    $("#table_body").empty(); // empty the task table with jQuery
 
-            // Completed button
-            let btn7 = $('<button></button>');
-            btn7.text("Completed");
-            
-            if(task_list[i].status === true){
-                td4.text("completed");
-                btn7.attr('disabled', 'true');
-            }
-            else{
-                td4.text("pending");
-                btn7.attr('class', 'btn btn-outline-success');
-                btn7.click(function(){
-                    task_list[i].status = true;
-                    latest_tasks["completed"]=task_list[i]
-                    writeToLocalStorage("latest_tasks", latest_tasks)
+    // Set filter criteria based on the filter type
+    if (filter === "completed") {
+        filter = true;
+    } else if (filter === "pending") {
+        filter = false;
+    }
 
-                    writeToLocalStorage("task_list", task_list)
-                    display_tasks();
+    // Sort the task list based on the selected sort criteria
+    if (sort !== "aa") {
+        task_list.sort(function(a, b) {
+            return a[sort].localeCompare(b[sort]);
+        });
+    } else {
+        task_list = readFromLocalStorage("task_list");
+    }
+
+    // Loop through the task list and display each task based on the filter
+    for (let i = 0; i < task_list.length; i++) {
+        // Check if the task should be displayed based on the filter
+        if (filter === "all" || filter === task_list[i].status) {
+            let tr = $('<tr></tr>'); // Create a new table row element with jQuery
+            let th = $('<th></th>').attr('scope', 'row').text(i + 1); // Row number
+
+            // Create table data cells for task details
+            let td1 = $('<td></td>').text(task_list[i].name); // Task name
+            let td2 = $('<td></td>').text(task_list[i].description); // Task description
+            let td3 = $('<td></td>').text(task_list[i].date); // Task date
+            let td4 = $('<td></td>'); // Status cell
+            let td5 = $('<td></td>'); // Edit button cell
+            let td6 = $('<td></td>'); // Delete button cell
+            let td7 = $('<td></td>'); // Completed button cell
+
+            // Create and configure the Edit button
+            let btn5 = $('<button></button>')
+                .text("Edit")
+                .attr('class', 'btn btn-outline-warning')
+                .click(function() {
+                    let aa = i + 1; // Adjust for display purposes
+                    $("#form_title").text("Update Task " + aa);
+                    $("#name").val(task_list[i].name);   
+                    $("#description").val(task_list[i].description);
+                    $("#date").val(task_list[i].date);
+                    to_update = i; // Set the index to update
+                    status_to_update = task_list[i].status; // Save current status
+                    $('html, body').animate({ scrollTop: 0 }, 'slow'); // Scroll to top
                 });
+
+            // Create and configure the Delete button
+            let btn6 = $('<button></button>')
+                .text("Delete")
+                .attr('class', 'btn btn-outline-danger')
+                .click(function() {
+                    latest_tasks["deleted"] = task_list[i]; // Save deleted task
+                    writeToLocalStorage("latest_tasks", latest_tasks);
+                    task_list.splice(i, 1); // Remove task from the task list
+                    writeToLocalStorage("task_list", task_list); // Update storage
+                    display_tasks(); // Refresh the task display
+                });
+
+            // Create and configure the Completed button
+            let btn7 = $('<button></button>').text("Completed");
+            if (task_list[i].status === true) {
+                td4.text("completed");
+                btn7.attr('disabled', 'true'); // Disable if already completed
+            } else {
+                td4.text("pending");
+                btn7.attr('class', 'btn btn-outline-success')
+                    .click(function() {
+                        task_list[i].status = true; // Mark task as completed
+                        latest_tasks["completed"] = task_list[i]; // Save completed task
+                        writeToLocalStorage("latest_tasks", latest_tasks);
+                        writeToLocalStorage("task_list", task_list); // Update storage
+                        display_tasks(); // Refresh the task display
+                    });
             }
 
+            // Append buttons to their respective cells
             td5.append(btn5);
             td6.append(btn6);
             td7.append(btn7);
 
-            tr.append(th);
-            tr.append(td1);
-            tr.append(td2);
-            tr.append(td3);
-            tr.append(td4);
-            tr.append(td5);
-            tr.append(td6);
-            tr.append(td7);
+            // Append all cells to the row
+            tr.append(th).append(td1).append(td2).append(td3).append(td4).append(td5).append(td6).append(td7);
 
+            // Append the row to the table body
             $("#table_body").append(tr);
-
         }
-        
     }
-    
-    
 }
 
-function filtering(){
+function filtering() {
+    // Set up click event for dropdown items
     $('.dropdown-item').click(function() {
-        let filterType = $(this).data('filter');
-        if( filterType!=null){
-            filter_by=filterType
+        let filterType = $(this).data('filter'); // Get filter type from data attribute
+        if (filterType != null) {
+            filter_by = filterType; // Update global filter variable
         }
-        let sortType = $(this).data('sort');
-        if( sortType!=null){
-            sort_by=sortType
+        let sortType = $(this).data('sort'); // Get sort type from data attribute
+        if (sortType != null) {
+            sort_by = sortType; // Update global sort variable
         }
-        // alert(filter_by+" "+sort_by)
-        display_tasks(filter_by,sort_by)
-        
-    })
+        // Call display_tasks with selected filter and sort options
+        display_tasks(filter_by, sort_by);
+    });
 }
-
