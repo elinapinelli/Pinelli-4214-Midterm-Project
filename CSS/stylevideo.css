@@ -17,6 +17,36 @@
     accent-color: #8e1f2c; /* For modern browsers that support it */
 }
 
+/* Light Mode Dropdown Styling */
+[data-bs-theme="light"] .custom-dropdown {
+    background-color: #ffffff; /* Light mode background */
+    color: #8e1f2c; /* Text color */
+    border: 1px solid #8e1f2c; /* Border color */
+}
+
+[data-bs-theme="light"] .custom-dropdown:hover,
+[data-bs-theme="light"] .custom-dropdown:focus {
+    background-color: #8e1f2c; /* Hover background color in light mode */
+    color: #000000; /* Black text color on hover */
+    outline: none; /* Remove default focus outline */
+    border-color: #8e1f2c; /* Keep border color */
+}
+
+/* Dark Mode Dropdown Styling */
+[data-bs-theme="dark"] .custom-dropdown {
+    background-color: #2f1e0c; /* Dark mode background */
+    color: #ffffff; /* Text color for dark mode */
+    border: 1px solid #8e1f2c; /* Border color */
+}
+
+[data-bs-theme="dark"] .custom-dropdown:hover,
+[data-bs-theme="dark"] .custom-dropdown:focus {
+    background-color: #8e1f2c; /* Hover background color in dark mode */
+    color: #000000; /* Black text color on hover */
+    outline: none; /* Remove default focus outline */
+    border-color: #8e1f2c; /* Keep border color */
+}
+
 [data-bs-theme="light"] .footer {
     text-align: center;
     padding: 20px 0;

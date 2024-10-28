@@ -17,6 +17,7 @@
     
 </head>
 <body>
+    <!-- Nav Bar --> 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -49,7 +50,7 @@
             </div>
         </div>
     </nav>
-
+<!-- Video --> 
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-8">
@@ -64,7 +65,7 @@
                                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                             </iframe>
                         </div>
-
+<!-- Rate --> 
                         <div class="mt-4 text-center">
                             <p>Did you like this video? Rate it:</p>
                             <form>
@@ -103,6 +104,18 @@
             </div>
         </div>
     </div>
+<!-- Feedback --> 
+    <div class="feedback-section mt-4">
+        <label for="appRating" class="form-label">How much did you like the app?</label>
+        <select id="appRating" class="form-select custom-dropdown" name="appRating">
+            <option value="1">1 - Not Much</option>
+            <option value="2">2 - Much</option>
+            <option value="3">3 - Very Much</option>
+            <option value="4">4 - A Lot</option>
+            <option value="5">5 - I Loved It</option>
+        </select>
+    </div>
+    
 
     <script>
         change_theme()
@@ -110,7 +123,7 @@
 
 <!-- Footer --> 
 <div class="footer">
-    <p>&copy; 2024 My Website | 
+    <p>&copy; 2024 TaskNet | 
         <a href="#" class="footer-link">Privacy Policy</a> | 
         <a href="#" class="footer-link">Terms of Service</a>
     </p>
