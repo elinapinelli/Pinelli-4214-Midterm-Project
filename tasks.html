@@ -1,5 +1,7 @@
 <html lang="en" data-bs-theme="dark">
 <head>
+    <meta name = "description" content = "midterm website"/>
+    <meta http-equiv="Author" content = "Elina Pinelli"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasks</title>
@@ -32,49 +34,7 @@
     </script>
      
     
-    
-    <script>
-        $(document).ready(function(){
-    $("#myform").submit(function (event){
-        event.preventDefault();
-        let name = $("#name").val();
-        let description = $("#description").val();
-        let date = $("#date").val();
-       
-        if(name === ""){
-            alert("You must enter name !!!");
-        }
-        else if(description === ""){
-            alert("You must enter description !!!");
-        }
-        else if(date === ""){
-            alert("You must enter date !!!");
-        }
-        else{
-            let task = {"name":name, "description":description, "date":date, "status":status_to_update};
-            if(to_update < 0){ //insert
-                task_list.push(task);    
-                latest_tasks["new"]=task
-                writeToLocalStorage("latest_tasks", latest_tasks)
-            }
-            else{ //update
-                task_list[to_update] = task;
-                latest_tasks["edit"]=task_list[to_update]
-                writeToLocalStorage("latest_tasks", latest_tasks)
-                to_update = -1;
-                status_to_update=false
-            }
-            writeToLocalStorage("task_list", task_list)
-            display_tasks();
-            //empty the inputs
-            $("#name").val("");
-            $("#description").val("");
-            $("#date").val("");
-            $("#form_title").text("Add New Task Form");
-        }
-    });
-});
-    </script>
+
     
     
 </head>
@@ -82,7 +42,7 @@
     
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href=".\index.html">
                 <img src="./Photos/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                 TaskNet
             </a>
@@ -201,17 +161,7 @@
  
 
     
-    <script>
-        display_tasks();
-    </script>
-
- 
-    <script>
-        filtering()
-    </script>
-    <script>
-        change_theme()
-    </script>
+    
     
 <!-- Footer --> 
 <div class="footer">
@@ -235,6 +185,18 @@
         </a>
     </div>
 </div>
+<script>
+    display_tasks();
+</script>
 
+
+<script>
+    filtering()
+</script>
+<script>
+    change_theme()
+    set_theme()
+    to_submit_task()
+</script>
 </body>
 </html>

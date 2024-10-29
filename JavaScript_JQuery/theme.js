@@ -14,5 +14,12 @@ function change_theme() {
 
         // Update the HTML element's data attribute to apply the new theme
         $('html').attr('data-bs-theme', new_theme);
+        writeToLocalStorage("theme", new_theme)//from read_write_local_storage.js
     });
+}
+
+
+function set_theme(){
+    let new_theme=readFromLocalStorage("theme")
+    $('html').attr('data-bs-theme', new_theme);//from read_write_local_storage.js
 }

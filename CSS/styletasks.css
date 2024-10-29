@@ -1,9 +1,9 @@
-body {
-    background-color: #fce6cf; /* Custom background color */
+[data-bs-theme="light"] body {
+    background-color: #fce6cf; /* Retained the custom background color */
 }
 
-.custom-margin {
-    margin-top: 80px; /* Prevent touching the navbar */
+[data-bs-theme="dark"] body {
+    background-color: #2f1e0c; /* Retained the custom background color */
 }
 
 
@@ -12,12 +12,10 @@ body {
     background-color: #8e1f2c; /* Change to your preferred color */
     padding: 1rem; /* Add padding for better spacing */
 }
-
 .navbar-brand {
     font-weight: bold; /* Make the brand name bold */
     font-size: 1.5rem; /* Increase font size */
 }
-
 .nav-link {
     color: #8e1f2c; /* White text color */
     font-weight: 500; /* Medium font weight */
@@ -28,11 +26,11 @@ body {
     color: #f47998; /* Change color on hover for better visibility */
 }
 
-
-
 .navbar-toggler-icon {
     background-color: #ffffff; /* White icon for toggler */
 }
+
+
 
 #filters_sorting{
    display: flex;
@@ -41,10 +39,6 @@ body {
 #filters_sorting div {
     margin-right: 10px; /* Optional: Adds space between elements */
 }
-
-
-
-
 #task-section {
     padding-top: 20px;
 }
@@ -74,8 +68,11 @@ body {
     color: #ffffff; /* Change text color on hover */
 }
 
-.dropdown-menu {
+[data-bs-theme="light"] .dropdown-menu {
     background-color: #ffffff; /* Background color for the dropdown */
+}
+[data-bs-theme="dark"] .dropdown-menu {
+    background-color: #000000; /* Background color for the dropdown */
 }
 
 .dropdown-item {
@@ -86,6 +83,9 @@ body {
     background-color: #8e1f2c; /* Background color on hover */
     color: #ffffff; /* Change text color on hover */
 }
+
+
+
 
    /* Table Styles */
    .table {

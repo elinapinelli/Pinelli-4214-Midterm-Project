@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 <head>
+    <meta name = "description" content = "midterm website"/>
+    <meta http-equiv="Author" content = "Elina Pinelli"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
@@ -12,6 +14,8 @@
 
     <!-- My Javascript -->
     <script src=".\JavaScript_JQuery\theme.js"></script>
+    <script src=".\JavaScript_JQuery\contact_page.js"></script>
+    <script src=".\JavaScript_JQuery\read_write_local_storage.js"></script>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -20,7 +24,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href=".\index.html">
                 <img src="./Photos/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                 TaskNet
             </a>
@@ -63,8 +67,8 @@
                 <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email" required>
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
             </div>
             <div class="mb-3">
                 <label for="subject" class="form-label">Subject</label>
@@ -74,7 +78,7 @@
                 <label for="message" class="form-label">Message</label>
                 <textarea class="form-control" id="message" placeholder="Type your message here" rows="4" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary w-100">Submit</button>
+            <button id="btn_submit" type="submit" class="btn btn-primary w-100">Submit</button>
         </form>
 
         <!-- Google Maps Integration -->
@@ -110,6 +114,8 @@
 
     <script>
         change_theme()
+        set_theme()
+        to_submit()
     </script>
 </body>
 </html>

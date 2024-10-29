@@ -117,3 +117,46 @@ function filtering() {
         display_tasks(filter_by, sort_by);
     });
 }
+
+function to_submit_task() {
+    $(document).ready(function(){
+        $("#myform").submit(function (event){
+            event.preventDefault();
+            let name = $("#name").val();
+            let description = $("#description").val();
+            let date = $("#date").val();
+           
+            if(name === ""){
+                alert("You must enter name !!!");
+            }
+            else if(description === ""){
+                alert("You must enter description !!!");
+            }
+            else if(date === ""){
+                alert("You must enter date !!!");
+            }
+            else{
+                let task = {"name":name, "description":description, "date":date, "status":status_to_update};
+                if(to_update < 0){ //insert
+                    task_list.push(task);    
+                    latest_tasks["new"]=task
+                    writeToLocalStorage("latest_tasks", latest_tasks)
+                }
+                else{ //update
+                    task_list[to_update] = task;
+                    latest_tasks["edit"]=task_list[to_update]
+                    writeToLocalStorage("latest_tasks", latest_tasks)
+                    to_update = -1;
+                    status_to_update=false
+                }
+                writeToLocalStorage("task_list", task_list)
+                display_tasks();
+                //empty the inputs
+                $("#name").val("");
+                $("#description").val("");
+                $("#date").val("");
+                $("#form_title").text("Add New Task Form");
+            }
+        });
+    });
+}
